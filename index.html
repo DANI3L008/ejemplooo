@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Negocios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Negocios</h1>
+  </header>
+  <main>
+    <!-- Verdulería -->
+    <section id="verduleria">
+      <h2>Verdulería</h2>
+      <form id="verduleriaForm">
+        <input type="text" id="nombreProducto" placeholder="Nombre del Producto" required>
+        <select id="familiaProducto">
+          <option value="Legumbre">Legumbre</option>
+          <option value="Grano">Grano</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <select id="tipoProducto">
+          <option value="Fruta">Fruta</option>
+          <option value="Verdura">Verdura</option>
+          <option value="Verdura">Otro</option>
+        </select>
+        <select id="origenProducto">
+          <option value="Árbol">Árbol</option>
+          <option value="Tierra">Tierra</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <input type="number" id="precioUnitario" placeholder="Precio Unitario" required>
+        <input type="number" id="precioKilo" placeholder="Precio por Kilo" required>
+        <input type="number" id="cantidadDisponible" placeholder="Cantidad Disponible (en unidades)" required>
+        <button type="submit">Agregar Producto</button>
+      </form>
+      <ul id="listaVerduleria"></ul>
+    </section>
+
+    <!-- Ferretería -->
+    <section id="ferreteria">
+      <h2>Ferretería</h2>
+      <form id="ferreteriaForm">
+        <input type="text" id="nombreFerreteria" placeholder="Nombre del Producto" required>
+        <input type="text" id="familiaFerreteria" placeholder="Familia del Producto" required>
+        <select id="departamentoFerreteria">
+          <option value="Electrónica">Electrónica</option>
+          <option value="Hogar">Hogar</option>
+          <option value="Construcción">Construcción</option>
+          <option value="Herramientas">Herramientas</option>
+        </select>
+        <select id="tamañoFerreteria">
+          <option value="Chico">Chico</option>
+          <option value="Mediano">Mediano</option>
+          <option value="Grande">Grande</option>
+        </select>
+        <input type="number" id="precioFerreteria" placeholder="Precio" required>
+        <input type="number" id="cantidadDisponibleFerreteria" placeholder="Cantidad Disponible" required>
+        <button type="submit">Agregar Producto</button>
+      </form>
+      <ul id="listaFerreteria"></ul>
+      <button onclick="generarCompraFerreteria()">Realizar Compra</button>
+    </section>
+
+    <!-- Café Internet -->
+    <section id="cafeInternet">
+      <h2>Café Internet</h2>
+      <form id="cafeForm">
+        <input type="text" id="nombreComputadora" placeholder="Nombre de la Computadora" required>
+        <input type="number" id="precioMinuto" placeholder="Precio por Minuto" required>
+        <button type="submit">Registrar Computadora</button>
+      </form>
+      <ul id="listaCafeInternet"></ul>
+      <button onclick="rentarComputadora()">Rentar Computadora</button>
+    </section>
+  </main>
+  <script src="verduleria.js"></script>
+  <script src="ferreteria.js"></script>
+  <script src="cafeInternet.js"></script>
+</body>
+</html>
